@@ -10,8 +10,8 @@ class NewEventForm extends React.Component {
     pk: 0,
     name: "",
     description: "",
-    startDate: "",
-    endDate: "",
+    startDate: Date,
+    endDate: Date,
   };
 
   componentDidMount() {
@@ -55,7 +55,7 @@ class NewEventForm extends React.Component {
         <FormGroup>
           <Label for="startDate">date de debut:</Label>
           <Input
-            type="text"
+            type="date"
             name="startDate"
             onChange={this.onChange}
           />
@@ -63,7 +63,7 @@ class NewEventForm extends React.Component {
         <FormGroup>
           <Label for="endDate">date de fin:</Label>
           <Input
-            type="text"
+            type="date"
             name="endDate"
             onChange={this.onChange}
           />
