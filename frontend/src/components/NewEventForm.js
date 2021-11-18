@@ -23,7 +23,6 @@ class NewEventForm extends React.Component {
 
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-    console.log(this.state.startDate)
   };
 
   createEvent = e => {
@@ -35,20 +34,28 @@ class NewEventForm extends React.Component {
   };
 
   render() {
+    const maxLength = 32;
     return (
       <Form onSubmit={this.createEvent}>
         <FormGroup>
           <Label for="name">Nom:</Label>
           <Input
+            data-testid="event-1"
             type="text"
             name="name"
+            maxLength="32"
             onChange={this.onChange}
           />
+          <div style={{fontSize:10}}>
+            { maxLength } caracteres maximum
+          </div>
+                
         </FormGroup>
         <FormGroup>
           <Label for="description">Description:</Label>
           <Input
             type="text"
+            maxLength="100"
             name="description"
             onChange={this.onChange}
           />
