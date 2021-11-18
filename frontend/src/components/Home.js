@@ -37,7 +37,7 @@ class Home extends Component {
         </Row>
         <Row>
           <Col>
-            <NewEventModal create={true} resetState={this.resetState} />
+            <NewEventModal resetState={this.resetState} />
           </Col>
         </Row>
       </Container>

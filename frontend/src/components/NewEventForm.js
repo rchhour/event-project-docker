@@ -32,21 +32,13 @@ class NewEventForm extends React.Component {
     });
   };
 
-  editEvent = e => {
-    e.preventDefault();
-    axios.put(API_URL + this.state.pk, this.state).then(() => {
-      this.props.resetState();
-      this.props.toggle();
-    });
-  };
-
   defaultIfEmpty = value => {
     return value === "" ? "" : value;
   };
 
   render() {
     return (
-      <Form onSubmit={this.props.event ? this.editEvent : this.createEvent}>
+      <Form onSubmit={this.createEvent}>
         <FormGroup>
           <Label for="name">Title:</Label>
           <Input

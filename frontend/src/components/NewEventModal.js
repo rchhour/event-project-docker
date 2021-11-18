@@ -14,24 +14,20 @@ class NewEventModal extends Component {
   };
 
   render() {
-    const create = this.props.create;
+  
+    var title = "Creer un evenement";
 
-    var title = "Editing Event";
-    var button = <Button onClick={this.toggle}>Edit</Button>;
-    if (create) {
-      title = "Creer un evenement";
-
-      button = (
-        <Button
-          color="primary"
-          className="float-right"
-          onClick={this.toggle}
-          style={{ minWidth: "200px" }}
-        >
-          Create New
-        </Button>
-      );
-    }
+    var button = (
+      <Button
+        color="primary"
+        className="float-right"
+        onClick={this.toggle}
+        style={{ minWidth: "200px" }}
+      >
+        Créer un événement
+      </Button>
+    );
+    
 
     return (
       <Fragment>

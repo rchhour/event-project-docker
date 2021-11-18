@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Table } from "reactstrap";
 import NewEventModal from "./NewEventModal";
 
-import ConfirmRemovalModal from "./ConfirmRemovalModal";
-
 class EventList extends Component {
   render() {
     const events = this.props.events;
@@ -31,16 +29,7 @@ class EventList extends Component {
                 <td>{event.startDate}</td>
                 <td>{event.endDate}</td>
                 <td align="center">
-                  <NewEventModal
-                    create={false}
-                    event={event}
-                    resetState={this.props.resetState}
-                  />
-                  &nbsp;&nbsp;
-                  <ConfirmRemovalModal
-                    pk={event.pk}
-                    resetState={this.props.resetState}
-                  />
+                  
                 </td>
               </tr>
             ))
