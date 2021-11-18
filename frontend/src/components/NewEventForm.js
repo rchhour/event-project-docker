@@ -8,7 +8,8 @@ import { API_URL } from "../constants";
 class NewEventForm extends React.Component {
   state = {
     pk: 0,
-    title: "",
+    name: "",
+    description: "",
     startDate: "",
     endDate: "",
   };
@@ -32,38 +33,39 @@ class NewEventForm extends React.Component {
     });
   };
 
-  defaultIfEmpty = value => {
-    return value === "" ? "" : value;
-  };
-
   render() {
     return (
       <Form onSubmit={this.createEvent}>
         <FormGroup>
-          <Label for="name">Title:</Label>
+          <Label for="name">Nom:</Label>
           <Input
             type="text"
-            name="title"
+            name="name"
             onChange={this.onChange}
-            value={this.defaultIfEmpty(this.state.title)}
           />
         </FormGroup>
         <FormGroup>
-          <Label for="email">date de debut:</Label>
+          <Label for="description">Description:</Label>
+          <Input
+            type="text"
+            name="description"
+            onChange={this.onChange}
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label for="startDate">date de debut:</Label>
           <Input
             type="text"
             name="startDate"
             onChange={this.onChange}
-            value={this.defaultIfEmpty(this.state.startDate)}
           />
         </FormGroup>
         <FormGroup>
-          <Label for="email">date de fin:</Label>
+          <Label for="endDate">date de fin:</Label>
           <Input
             type="text"
             name="endDate"
             onChange={this.onChange}
-            value={this.defaultIfEmpty(this.state.endDate)}
           />
         </FormGroup>
   

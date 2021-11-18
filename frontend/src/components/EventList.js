@@ -9,7 +9,8 @@ class EventList extends Component {
       <Table dark>
         <thead>
           <tr>
-            <th>titre</th>
+            <th>nom</th>
+            <th>description</th>
             <th>date de debut</th>
             <th>date de fin</th>
             <th></th>
@@ -25,7 +26,8 @@ class EventList extends Component {
           ) : (
             events.map(event => (
               <tr key={event.pk}>
-                <td>{event.title}</td>
+                <td>{event.name}</td>
+                <td>{event.description}</td>
                 <td>{event.startDate}</td>
                 <td>{event.endDate}</td>
                 <td align="center">
