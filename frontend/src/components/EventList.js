@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
-import NewEventModal from "./NewEventModal";
 
 class EventList extends Component {
   render() {

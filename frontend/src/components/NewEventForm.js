@@ -10,8 +10,8 @@ class NewEventForm extends React.Component {
     pk: 0,
     name: "",
     description: "",
-    startDate: Date,
-    endDate: Date,
+    startDate: new Date().getTimezoneOffset(),
+    endDate: new Date().getTimezoneOffset(),
   };
 
   componentDidMount() {
@@ -23,6 +23,7 @@ class NewEventForm extends React.Component {
 
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
+    console.log(this.state.startDate)
   };
 
   createEvent = e => {
