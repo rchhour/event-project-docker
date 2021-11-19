@@ -1,1 +1,1 @@
-# event-project
+# event-project-docker
